@@ -1,0 +1,137 @@
+.info{
+	
+	min-height: 200px;
+	width: 100%;
+		background-color: #fff;
+	
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* Изменено для лучшего визуального центрирования текста и подчеркивания */
+	align-items: center;
+	
+	
+	
+}
+
+
+.info a {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 5px;
+    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+    overflow: hidden; /* Убедитесь, что все внутри ограничено контейнером */
+	text-decoration: none;
+	color: #3d8075;
+}
+
+
+.info a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3d8075; /* Цвет подчеркивания */
+    transform: scaleX(0); /* Сжимаем по горизонтали до нуля */
+    transform-origin: center; /* Трансформация начинается слева */
+    transition: transform 0.3s ease-in-out; /* Плавная анимация трансформации */
+}
+
+.info a:hover::after {
+    transform: scaleX(1); /* Растягиваем подчеркивание на всю ширину при наведении */
+}
+
+.info p {
+	
+	font-size: 16px;
+	font-weight: 600;
+	padding: 8px;
+	color: #595959;
+	
+}
+
+.info_p{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+    max-width: 80%;
+	
+}
+
+
+.info_img{
+	padding: 10px;
+}
+.info img{
+	padding: 20px;
+	max-height: 300px;
+}
+
+
+.info span img {
+    transition: transform 0.3s ease; /* Добавляем плавность к свойству transform */
+}
+
+.info span:hover img {
+    transform: scale(1.2);
+    /* Увеличение изображения при наведении */
+}
+
+
+.info .comp_img{
+	padding: 20px;
+	max-height: 230px;
+}
+
+.info span .comp_img {
+    transition: transform 0.3s ease; /* Добавляем плавность к свойству transform */
+}
+
+.info span:hover .comp_img {
+    transform: scale(1.2);
+    /* Увеличение изображения при наведении */
+}
+
+.p_price{
+	
+	color: #e2c63b;
+	
+	font-weight: 700;
+	font-size: 28px;
+}
+
+.block_button{
+	
+	display: flex;
+	
+	justify-content: space-around;
+	width: 100%;
+	margin: auto;
+}
+
+.block_button button {
+	
+	background-color: #3d8075;
+	min-width: 150px;
+	min-height: 150px;
+	margin: 10px;
+	max-width: 120px;
+	color: #fff;
+}
+
+
+.block_button button p {
+	
+
+	color: #fff;
+}
+.block_button img{
+	
+	
+	max-width: 100px;
+}

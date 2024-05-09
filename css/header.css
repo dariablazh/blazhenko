@@ -1,0 +1,43 @@
+header{
+	width: 100%;
+	min-height: 100px;
+	overflow: hidden;
+
+	padding: 20px;
+	
+	
+
+}
+
+header {
+	display: flex;
+background-color: #e2c63b;
+	align-items: center;
+
+
+}
+
+.header_p {
+	display: flex;
+	flex-direction: column;
+justify-content: center;
+	padding: 10px;
+}
+
+header p {
+
+	font-weight: 700;
+	font-size: 20px;
+	padding-bottom: 5px;
+	color: #3d8075;
+}
+
+header img {
+
+	max-height: 80px;
+ transition: transform 0.3s ease; /* Добавляем плавность к свойству transform */
+}
+header a:hover img {
+	transform: scale(1.1);
+	/* Увеличение изображения при наведении */
+}

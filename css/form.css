@@ -1,0 +1,65 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+form label {
+	display: flex;
+	justify-content: flex-start;
+    color: #3d8075;
+    font-weight: 600;
+    margin: 10px 0px;
+   
+}
+
+form input,
+form textarea {
+    width: 100%;
+    min-width: 300px;
+    padding: 10px;
+    border: 3px solid #3d8075;
+    border-radius: 5px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+	width: 10%;
+	 min-width: 30px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+form textarea {
+    max-width: 500px;
+    max-height: 150px;
+    min-height: 80px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #3d8075;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #2a6051;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(1px);
+}
+
+form button:focus {
+    outline: none;
+}

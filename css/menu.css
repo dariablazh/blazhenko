@@ -1,0 +1,49 @@
+.menu {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #3d8075;
+	color: #fff;
+	padding: 20px;
+	font-weight: 700;
+	position: relative;
+}
+
+.menu img {
+	max-height: 40px;
+	padding-right: 15px;
+}
+
+.menu a {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* Изменено для лучшего визуального центрирования текста и подчеркивания */
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+	/* Добавлено для позиционирования псевдоэлемента */
+
+}
+
+.block_m {
+	display: flex;
+
+}
+
+
+
+.menu a:hover img {
+	transform: scale(1.1);
+	/* Увеличение изображения при наведении */
+}
+
+
+
+.menu a:hover {
+	color: #e2c63b;
+	/* Задаємо колір посилань при наведенні */
+	cursor: pointer;
+	/* Змінюємо курсор на вказівник */
+}

@@ -1,0 +1,260 @@
+.product {
+   
+    display: flex;
+    
+    justify-content: center; /* Рівномірно розміщує блоки в батьківському контейнері */
+     background-color:  #c3c391;
+    
+    width: 100%; 
+	
+	margin: 10px 0px 10px 0px; /* Встановлює відступи: 
+                                    30px зверху,
+                                    0px справа,
+                                    30px знизу,
+                                    0px зліва */
+}
+
+
+
+
+.serch {
+   margin: auto;
+	width: 30%;
+    height: 500px; /* Встановіть фіксовану висоту для блоку */
+    display: flex;
+    flex-direction: column;
+
+    background-color: #3d8075;
+	border-radius: 20px;
+}
+
+
+.product_serch {
+	
+	 height: 800px; /* Встановіть фіксовану висоту для блоку */
+}
+
+.serch form {
+    /* Встановіть висоту форми на 100% */
+	width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Змініть justify-content на flex-start */
+    padding: 10px;
+}
+
+form .f_c{
+	
+    height: 390px;
+	max-height: 390px;
+		overflow: auto;
+	
+}
+/* Сховати смугу прокрутки в браузерах, які підтримують властивості вебкіт */
+.f_c::-webkit-scrollbar {
+    width: 0.2em; /* Товщина смуги прокрутки */
+}
+
+.f_c::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Колір смуги прокрутки */
+}
+
+.serch p {
+	text-align: center;
+  font-weight: 700;
+	font-size: 25px;
+	padding-bottom: 20px;
+	color: #fff;
+	
+}
+
+
+
+
+.serch a {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 5px;
+    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+    overflow: hidden; /* Убедитесь, что все внутри ограничено контейнером */
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.serch a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff; /* Цвет подчеркивания */
+    transform: scaleX(0); /* Сжимаем по горизонтали до нуля */
+    transform-origin: center; /* Трансформация начинается слева */
+    transition: transform 0.3s ease-in-out; /* Плавная анимация трансформации */
+}
+
+.serch a:hover::after {
+    transform: scaleX(1); /* Растягиваем подчеркивание на всю ширину при наведении */
+}
+
+
+
+
+
+
+
+form label{
+	
+	font-weight: 600;
+	font-size: 15px;
+	padding-bottom: 10px;
+	color: #fff;
+		 word-wrap: break-word; /* Перенос слів, якщо вони не поміщаються в межах блоку */
+ line-height: 1.5; /* Збільшення інтервалу між рядками */
+	
+	
+}
+form label:hover {
+ color: #e2c63b;
+ 
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: auto; /* Кнопка прижметься до низу форми */
+    /* Видаліть margin: 10px; */
+    border: none;
+    background-color: #e2c63b;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+  background-color: #e2c63b; /* Темніший відтінок зеленого при наведенні */
+  transform: translateY(-2px); /* Невелике підняття кнопки при наведенні */
+}
+
+form button:active {
+  transform: translateY(1px); /* "Натискання" кнопки при кліку */
+}
+
+form button:focus {
+  outline: none; /* Відсутність контуру при фокусі для кращого візуального вигляду */
+}
+
+.panel{
+	width: calc(70% - 10px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	overflow: auto;
+	 max-height: 500px;
+	margin-right: 10px;
+}
+.card {
+    display: flex;
+    background-color: #3d8075;
+    padding: 10px;
+    justify-content: flex-start;
+	align-items: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0px 10px 10px 10px;
+    width: calc(50% - 20px);
+    max-height: 250px;
+    transition: background-color 0.3s, transform 0.3s; /* Додайте перехід для кольору фону та трансформації */
+	
+	border-radius: 20px;
+}
+
+.card:hover {
+    background-color: #e2c63b;
+    transform: scale(1.03); /* Збільшення розміру картки при наведенні */
+}
+
+
+
+
+.card p, 
+.card span {
+   
+    padding: 5px;
+}
+
+.card_right p:first-of-type {
+    font-size: 14px; /* Збільшення розміру шрифту для першого <p> */
+    color: #e2c63b; /* Зміна кольору тексту для першого <p> */
+}
+.card:hover p:first-of-type {
+    color: #3d8075; /* Зміна кольору тексту для першого <p> при наведенні на блок .card_right */
+}
+
+
+.card_left {
+    width: 100%; /* Зображення займає всю доступну ширину */
+    height: 200px; /* Зображення займає всю доступну висоту */
+    object-fit: cover; /* Щоб зображення займало весь доступний простір, не викриваючи пропорції */
+	overflow: hidden;
+	margin-right: 20px;
+	
+	border-radius: 20px;
+}
+.card_left img {
+    width: 100%; /* Зображення займає всю доступну ширину */
+    height: 200px; /* Зображення займає всю доступну висоту */
+    object-fit: cover; /* Щоб зображення займало весь доступний простір, не викриваючи пропорції */
+	border-radius: 20px;
+}
+
+
+
+
+.card_left p img {
+    transition: transform 0.3s ease; /* Добавляем плавность к свойству transform */
+}
+
+.card_left p:hover img {
+    transform: scale(1.2);
+    /* Увеличение изображения при наведении */
+}
+
+
+.card_right{
+	
+	 width: 100%; /* Зображення займає всю доступну ширину */
+    height: 200px; /* Зображення займає всю доступну висоту */
+    object-fit: cover; /* Щоб зображення займало весь доступний простір, не викриваючи пропорції */
+	overflow: auto;
+	 word-wrap: break-word; /* Перенос слів, якщо вони не поміщаються в межах блоку */
+ line-height: 1.5; /* Збільшення інтервалу між рядками */
+	
+}
+
+/* Сховати смугу прокрутки в браузерах, які підтримують властивості вебкіт */
+.card_right::-webkit-scrollbar {
+    width: 0.2em; /* Товщина смуги прокрутки */
+}
+
+.card_right::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Колір смуги прокрутки */
+}
+
+
+/* Сховати смугу прокрутки в браузерах, які підтримують властивості вебкіт */
+.panel::-webkit-scrollbar {
+    width: 0.2em; /* Товщина смуги прокрутки */
+}
+
+.panel::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Колір смуги прокрутки */
+}
+

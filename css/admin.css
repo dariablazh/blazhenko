@@ -1,0 +1,405 @@
+/*Обнулення*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
+	font-family: Arial, sans-serif;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+.icon_img{
+	
+	max-height: 100px;
+	padding: 10px;
+	margin: 10px;
+}
+
+header{
+	
+	min-height: 130px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	color: white;
+	font-size: 50px;
+	font-weight: 700;
+	background-color: #505050;
+}
+
+
+
+.content {
+	flex: 1 1 auto;
+	width: 100%;
+	
+	display: flex;
+	justify-content: space-between;
+
+}
+/*////////////////////////////////////////////////////////*/
+.content .menu{
+	
+	width: 15%;
+	background-color: #505050;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	
+}
+.menu .block{
+	
+	
+	display: flex;
+	width: calc(100% - 20px);
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	color: white;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 10px;
+	transition: transform 0.3s ease;
+	
+}
+
+.menu .block_1{
+	
+	
+	display: flex;
+	width: calc(100% - 20px);
+	flex-direction: column;
+	justify-content: center;
+	background-color: #606060;
+	border-radius: 10px;
+	align-items:center;
+	color: white;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 10px;
+	transition: transform 0.3s ease;
+	
+}
+
+.menu .block:hover{
+	
+	
+	background-color: #606060;
+	border-radius: 10px;
+	cursor: pointer;
+	
+}
+.menu .block_1:hover{
+	
+	
+	background-color: #404040;
+	border-radius: 10px;
+	cursor: pointer;
+	
+}
+.menu .block p{
+	
+	
+	margin-bottom: 10px;
+	
+}
+.menu .block_1 p{
+	
+	
+	margin-bottom: 10px;
+	
+}
+
+/*////////////////////////////////////////////////////////*/
+.content .panel{
+	
+	width: 85%;
+	background-color: #202020;
+	display: flex;
+
+	justify-content: space-around;
+	align-items: center;
+	
+}
+
+.panel .panel_block{
+	
+	width: calc(50% - 20px);
+	
+	margin: 10px;
+	background-color: #606060;
+	max-height: 540px;
+	min-height: 540px;
+	
+	
+	display: flex;
+	
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	
+}
+
+
+
+.panel_block .title {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 40px;
+	width: 100%;
+	background-color: #505050;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	
+}
+
+.panel_block .cont {
+	
+	width: 100%;
+	min-height: 500px;
+	overflow: auto;
+	padding: 30px;
+}
+.panel_block .cont::-webkit-scrollbar {
+    width: 0.2em; /* Товщина смуги прокрутки */
+}
+
+.panel_block .cont::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Колір смуги прокрутки */
+}
+
+
+/*////////////////////////////////////////////////////////*/
+
+/* Стилі для форми */
+.panel form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.panel form label {
+    margin-top: 10px;
+    color: white;
+	font-size: 18px;
+	font-weight: 600;
+}
+.panel form p{
+	 
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	
+    color: white;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.panel form input[type="text"],
+.panel form input[type="file"],
+.panel form textarea,
+.panel form input[type="number"] {
+    width: 100%;
+	min-height: 30px;
+	min-width: 100%;
+	max-width: 100%;
+	max-height: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #404040;
+    color: white;
+}
+
+.panel form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:  #505050;
+	font-weight: 700;
+	font-size: 16px;
+    color: white;
+    cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.panel form input[type="submit"]:hover {
+    background-color: #202020;
+	 color: #505050;
+}
+
+.panel form input[type="radio"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+	  margin: 10px;
+}
+
+.panel form input[type="radio"] + label {
+ 
+	 
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+/*////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.cont table {
+    width: 100%;
+    border-collapse: collapse; /* Злиття меж клітинок */
+    margin-top: 20px; /* Відступ від верхньої частини контейнера */
+}
+
+.cont th,
+.cont td {
+    border: 2px solid #202020; /* Тонка сіра межа */
+    padding: 8px; /* Відступи всередині клітинки */
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+	
+}
+
+.cont th {
+   background-color: #404040; /* Світло-сірий фон заголовку */
+    color: white; /* Чорний колір тексту в заголовку */
+	
+}
+
+/* Стилі для альтернативних рядків */
+.cont tr:nth-child(even) {
+    background-color: #808080; /* Світло-сірий фон для парних рядків */
+}
+
+.cont tr:hover {
+    background-color: #ddd; /* Зміна кольору фону при наведенні */
+	color: #202020;
+	
+}
+
+.cont b{
+	
+	text-decoration: none;
+	
+	font-weight: 700;
+	color: white;
+	
+}
+
+.cont p{
+	
+	text-decoration: none;
+	font-size: 14px;
+	
+	font-weight: 700;
+	color: white;
+	
+}
+
+.cont tr:hover b {
+   
+	color: #202020;
+	cursor: pointer;
+	
+}
